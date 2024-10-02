@@ -1,0 +1,31 @@
+
+kthOccurrence 
+============================================================================
+there exists an integer array called arr, an integer value X.
+For each element of a separate additional integer array called occurrenceQueries,
+return the index in arr of the occurrenceQueries[i] occurrence of X. If X
+does not occur occurrenceQueries[i] times, return -1 for that query
+ 
+example:
+ 
+arr = [0, 20, 1, 9, 1, 5, 9, 9, 2, 2]
+X = 9
+occurrenceQueries = [476, 3, 9, 1, 2]
+ 
+there is no 476th or 9th instance of X = 9 in arr.
+the 3rd occurence is at index 7, for example
+return -> [ -1, 7, -1, 3, 6]
+ 
+ 
+Function Desc:
+Compute the function kthOccurence
+ 
+kthOccurence has following arguments
+int X: search variable
+int arr[n]: array of elements to search
+int occurrenceQueries[m]: array of kth occurences to query arr
+ 
+constraints:
+0<=arr[n], X<=10^5
+1<= n, q, m,<=10^9
+ 
