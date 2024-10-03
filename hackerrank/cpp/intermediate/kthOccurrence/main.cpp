@@ -11,12 +11,13 @@
         2. check if the query_value, aka k, is bigger than the size of the occurrence array. if so, return -1 
         3. just use qv[i] to index the value of hashMap[X]...
     */
+
     // edit 10/02/2024 pass by reference was a big missed opportunity for improvement
     //                 since we aren't manipulating the data, set const.
     std::vector<int> kthOccurrence(int X, const std::vector<int> &arr, const std::vector<int> &occurrenceQueries) {
     // initialize return var and hashMap
     std::vector<int> results = {};
-    std::unordered_map<int, std::vector<int>> hashMap;
+    std::unordered_map<int, std::vector<int> > hashMap;
     
     for (int i = 0; i < arr.size(); i++) 
         hashMap[arr[i]].push_back(i);

@@ -7,17 +7,17 @@
 */
 
 #include <stdio.h>
-#define SIZE 10
-
+#include <stdlib.h>
 typedef struct {
-    int item[SIZE];
+    int* item;
     int top;
+    int size;
 } Stack;
 
 // since we are in c, it is possible to index into memory not allocated for an array
 // thus we must handle this and check if we were to push an element would we overflow into other memory?
 void push(Stack *s, int val) {
-    if(s->top == SIZE - 1) {
+    if(s->top == s->size -1) {
         printf("Stack overflow\n");
         return;
     }
@@ -37,27 +37,51 @@ int pop(Stack *s) {
     return topVal;
 };
 
-void init(Stack *s) {
+void init(Stack *s, int size) {
     s->top = -1;
+    
+    s->item = (int *) malloc(sizeof(int) * s->size);
+    if(s->item == NULL) {
+        printf("Unable to allocate memory\n");
+        exit(1);
+    }
+    s->size = size;
+}
+
+
+void deallocate(Stack *s) {
+    if(s->item != NULL)
+        free(s->item);
+}
+void getTop(Stack *s) {
+    printf("Top of stack: %d\n", s->item[s->top]);
 }
 
 int main() {
     Stack s1, s2;
     int popS1, popS2;
 
-    init(&s1);
-    init(&s2);
+    init(&s1, 10);
+    init(&s2, 20);
     push(&s1, 1);
     push(&s2, 2);
+
+    getTop(&s1);
+    getTop(&s2);
+
     push(&s1, 123);
     push(&s2, 369);
 
+    getTop(&s1);
+    getTop(&s2);
     popS1 = pop(&s1);
     popS2 = pop(&s2);
 
     printf("deleted from s1 : %d\n", popS1);
     printf("deleted from s2 : %d\n", popS2); 
 
+    deallocate(&s1);
+    deallocate(&s2);
     
     return 0;
 }
