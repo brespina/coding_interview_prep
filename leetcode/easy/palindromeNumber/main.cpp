@@ -1,5 +1,14 @@
 #include <bits/stdc++.h>
+/*
+    essentially we use modulo to isolate the least significant digit.
+    this digit will become our most significant digit for "reversed"
+    integer divide by 10 to prep for next loop iteration.
+    reversed is the exact opposite.
+    multiply reversed by 10. add digit.
 
+
+
+*/
 class Solution {
 public:
     bool isPalindrome(long long int x) {
@@ -8,13 +17,10 @@ public:
             return false;
         long long int reversed = 0;
 
+
         while(copy > 0) {
             int digit = copy % 10;
             reversed = reversed * 10 + digit;
-
-            // std::cout << "number: " << copy << std::endl;
-            // std::cout << "remainder: " << copy % 10 << std::endl;
-            // std::cout << "divide by 10: " << copy / 10 << std::endl;
 
             copy /= 10;
         }
