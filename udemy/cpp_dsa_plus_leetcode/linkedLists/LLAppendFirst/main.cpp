@@ -1,3 +1,5 @@
+// LLAppendFirst
+
 #include <iostream>
 
 class Node {
@@ -50,30 +52,26 @@ class LinkedList {
 			std::cout << std::endl;
 		}
 
-		Node* getHead() {
-			return head;
-		}
-		
-		Node* getTail() {
-			return tail;
-		}
-
-		int getLength() {
-			return length;
-		}
+		Node* getHead() { return head; }
+		Node* getTail() { return tail; }
+		int getLength() { return length; }
 
 		// we will use this to test append()
 		void makeEmpty() {
-			Node* temp = head;
-			while(!head) {
-				head = head->next;
-				delete temp;
-				temp = head;
+			if (length == 0 || head == nullptr ) {
+				std::cout << "empty list" << std::endl;
 			}
-			tail = nullptr;
-			length = 0;
+			else {
+				Node* temp = head;
+				while(!head) {
+					head = head->next;
+					delete temp;
+					temp = head;
+				}
+				tail = nullptr;
+				length = 0;
+			}
 		}
-
 
 		// write append func
 		void append(int value) {
