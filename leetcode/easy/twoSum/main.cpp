@@ -6,7 +6,7 @@ class Solution {
 	public:
 		std::vector<int> twoSum(std::vector<long long int> &nums, int target) {
 			std::unordered_map<long long int, int> hashMap;
-			// build hashMap 
+
 			for(int i = 0; i < nums.size(); i++) {
 				int diff = target - nums[i];
 				if(hashMap.count(diff)) {
