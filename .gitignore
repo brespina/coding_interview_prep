@@ -1,4 +1,10 @@
 .vscode/
 */.vscode/*
 *.exe
+*/*.exe
 */.exe/*
+
+# linux executables
+*.out
+*.bin
+*.run
