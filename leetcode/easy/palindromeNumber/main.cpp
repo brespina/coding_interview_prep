@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-/*
+  /*
     essentially we use modulo to isolate the least significant digit.
     this digit will become our most significant digit for "reversed"
     integer divide by 10 to prep for next loop iteration.
