@@ -4,7 +4,6 @@
 */*.exe
 */.exe/*
 
-# linux executables
-*.out
-*.bin
-*.run
+# ignore c++ compiled executables binaries
+leetcode/**/main
+
