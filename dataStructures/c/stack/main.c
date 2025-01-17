@@ -14,6 +14,13 @@ typedef struct {
     int size;
 } Stack;
 
+// function prototypes
+void push(Stack *s, int val);
+int pop(Stack *s);
+void init(Stack *s, int size);
+void deallocate(Stack *s);
+void getTop(Stack *s);
+
 // since we are in c, it is possible to index into memory not allocated for an array
 // thus we must handle this and check if we were to push an element would we overflow into other memory?
 void push(Stack *s, int val) {
@@ -47,7 +54,6 @@ void init(Stack *s, int size) {
     }
     s->size = size;
 }
-
 
 void deallocate(Stack *s) {
     if(s->item != NULL)

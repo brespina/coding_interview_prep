@@ -4,10 +4,10 @@
 // Node structure
 class Node {
 public:
-    int data;         // Data part
-    int* next;       // Pointer to the next node
+    int data;         // data part
+    int* next;       // pointer to the next node
 
-    // Constructor to initialize node
+    // constructor to initialize node
     Node(int val) {
         data = val;
         next = nullptr;
@@ -20,9 +20,8 @@ private:
     int* head;
 	int* tail;
 public:
-    // Constructor
     LinkedList() {
-        head = nullptr; // Initialize an empty list
+        head = nullptr; 
 		tail = nullptr;
     }
 
@@ -46,16 +45,6 @@ public:
 		}
 		
 		Node* newNode = new Node(val);
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -6,4 +6,4 @@
 
 # ignore c++ compiled executables binaries
 leetcode/**/main
-
+dataStructures/**/**/main
