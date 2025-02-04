@@ -3,8 +3,10 @@
     bwandii
 """
 
+
 def merge_alternatively(word1: str, word2: str) -> str:
     result = ""
+
     if len(word1) > len(word2):
         short_word = word2
         long_word = word1
