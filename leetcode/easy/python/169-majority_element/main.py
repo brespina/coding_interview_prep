@@ -9,7 +9,6 @@ def majority_element(nums: List[int]) -> int:
     n = len(nums)
     return nums[n // 2]
 
-
     
 def main():
     nums = [1,1,1,2,2,3,3,3,3,3,3,3,3]
