@@ -8,18 +8,7 @@ def is_palindrome(s: str) -> bool:
     for char in s.lower():
         if char.isalnum():
             result += char
-
-    if len(result) < 1:
-        return False
-    elif len(result) == 1:
-        return True
-    else:
-        j = -1
-        for i in range(len(result)//2):
-            if result[i] != result[j]:
-                return False
-            j -= 1
-        return True
+    return result[::-1] == result
 
 
 def main():
