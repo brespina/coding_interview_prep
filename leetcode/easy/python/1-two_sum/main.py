@@ -5,6 +5,7 @@
 
 from typing import List
 
+
 def twoSum(nums: List[int], target: int) -> List[int]:
     hash_map = {}
 
@@ -15,8 +16,8 @@ def twoSum(nums: List[int], target: int) -> List[int]:
             return [hash_map[complement], i]
 
         hash_map[nums[i]] = i
-    
-    return [] 
+
+    return []
 
 
 def main():
@@ -32,7 +33,7 @@ def main():
     for nums, target in test_cases:
         result = twoSum(nums, target)
         print(f"nums: {nums}, target: {target}, result: {result}")
-    
+
 
 if __name__ == "__main__":
     main()

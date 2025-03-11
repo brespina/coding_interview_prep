@@ -4,11 +4,14 @@
 
 from typing import List
 
+
 def max_profit(prices: List[int]) -> int:
+
+    return 0
 
 
 def main():
-    prices = [1,2,3,4,5,6]
+    prices = [1, 2, 3, 4, 5, 6]
     print("best time to buy and sell: ", max_profit(prices))
 
 
