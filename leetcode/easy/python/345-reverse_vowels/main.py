@@ -4,6 +4,7 @@
 
 VOWELS = ['A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u']
 
+
 def reverse_vowels(s: str) -> str:
     vowel_pos = []
     for char in s:
@@ -14,8 +15,8 @@ def reverse_vowels(s: str) -> str:
     print(f"original vowels: {vowel_pos}")
     print(f"reversed vowels: {reversed_vowels}")
 
-    
     return reversed
+
 
 def main():
     test_0 = "hello world"
@@ -30,7 +31,5 @@ def main():
     reverse_vowels(test_2)
 
 
-
 if __name__ == "__main__":
     main()
-
