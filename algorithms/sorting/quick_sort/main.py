@@ -9,6 +9,8 @@ Omega(n log(n))  |  Theta(n log(n))  |  O(n^2)
 spaace complexity:
 Worst
 O(log(n))
+
+stable: no
 """
 
 from typing import List, Tuple

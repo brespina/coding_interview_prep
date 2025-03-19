@@ -8,6 +8,8 @@ Omega(n)  |  Theta(n^2)  |  O(n^2)
 space complexity:
 Worst
 O(1)
+
+stable: yes
 """
 
 from typing import List, Tuple

@@ -2,12 +2,14 @@
 Bubble sort implementation
 
 time complexity:
-     Best               Average         Worst
-Omega(n log(n))  |  Theta(n log(n))  |  O(n^2)
+     Best     Average       Worst
+Omega(n)  |  Theta(n^2)  |  O(n^2)
 
 space complexity:
 Worst
-O(log(n))
+O(1)
+
+stable: yes
 """
 
 from typing import List, Tuple
